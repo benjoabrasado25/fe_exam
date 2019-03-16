@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front End Exam</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+	<div style="width: 100%; text-align: center;">
+		<h1 style="padding: 3vh 0px 3vh 0px">Population</h1>
+	</div>
+	<div class="container">
+	    <div class="form-group">
+			<label for="api">API:</label>
+			<input type="text" class="form-control" id="api" placeholder="Enter API" name="api" value="http://api.population.io/1.0/population/1980/aged/18/?format=json">
+	    </div>
+	    <div class="form-group">
+			<label for="treshhold">Treshhold:</label>
+			<input type="text" class="form-control" id="treshhold" placeholder="Enter Treshhold" name="treshhold" value="50000000">
+	    </div>
+
+		<button type="submit" class="btn btn-primary" onclick="changeData($('#api').val(), $('#treshhold').val())">Submit</button>
+	</div>
+
+	<div id="chart_div" style="width: 100%; height: 500px;"></div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
